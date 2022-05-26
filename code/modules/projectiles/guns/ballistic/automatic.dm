@@ -87,7 +87,7 @@
 	icon_state = "wt550"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
-	fire_delay = 2
+	fire_delay = 1.5
 	burst_size = 1
 	can_suppress = FALSE
 	can_bayonet = TRUE
@@ -96,7 +96,6 @@
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
-	weapon_weight = WEAPON_MEDIUM
 
 /obj/item/gun/ballistic/automatic/wt550/occupying
 	name = "surplus security auto rifle"
