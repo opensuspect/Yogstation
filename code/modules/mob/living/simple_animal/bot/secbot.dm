@@ -223,7 +223,8 @@ Auto Patrol: []"},
 		return
 	if(iscarbon(A))
 		var/mob/living/carbon/C = A
-		if((!C.IsParalyzed() || arrest_type) && stuncount < 30)
+		var/current_stamina_damage = C.getStaminaLoss()
+		if((current_stamina_damage >= 100 || arrest_type) && stuncount < 30)
 			stun_attack(A)
 			if(lastStunned && lastStunned == A)
 				stuncount++
@@ -268,7 +269,8 @@ Auto Patrol: []"},
 	var/threat = 5
 	if(ishuman(C))
 		C.stuttering = 5
-		C.Paralyze(100)
+		var/armor_block = C.run_armor_check(affecting, ENERGY)
+		C.apply_damage(stamina_damage, STAMINA, BODY_ZONE_CHEST, armor_block)
 		var/mob/living/carbon/human/H = C
 		threat = H.assess_threat(judgement_criteria, weaponcheck=CALLBACK(src, .proc/check_for_weapons))
 	else
