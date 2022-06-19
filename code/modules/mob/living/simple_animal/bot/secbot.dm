@@ -270,7 +270,7 @@ Auto Patrol: []"},
 	if(ishuman(C))
 		C.stuttering = 5
 		var/armor_block = C.run_armor_check(affecting, ENERGY)
-		C.apply_damage(stamina_damage, STAMINA, BODY_ZONE_CHEST, armor_block)
+		C.apply_damage(70, STAMINA, BODY_ZONE_CHEST, armor_block)
 		var/mob/living/carbon/human/H = C
 		threat = H.assess_threat(judgement_criteria, weaponcheck=CALLBACK(src, .proc/check_for_weapons))
 	else
