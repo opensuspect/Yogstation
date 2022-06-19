@@ -16,7 +16,7 @@
 	radio_channel = RADIO_CHANNEL_SECURITY
 	bot_type = SEC_BOT
 	model = "ED-209"
-	bot_core = /obj/machinery/bot_core/secbot
+	bot_type_core = /obj/machinery/bot_core/secbot
 	window_id = "autoed209"
 	window_name = "Automatic Security Unit v2.6"
 	allow_pai = 0
@@ -527,7 +527,8 @@ Auto Patrol[]"},
 		return
 	if(iscarbon(A))
 		var/mob/living/carbon/C = A
-		if(!C.IsStun() || !C.IsParalyzed() || arrest_type)
+		var/current_stamina_damage = C.getStaminaLoss()
+		if(!current_stamina_damage >= 100 || !C.IsParalyzed() || arrest_type)
 			stun_attack(A)
 		else if(C.canBeHandcuffed() && !C.handcuffed)
 			cuff(A)
@@ -545,7 +546,8 @@ Auto Patrol[]"},
 	spawn(2)
 		icon_state = "[lasercolor]ed209[on]"
 	var/threat = 5
-	C.Paralyze(100)
+	var/armor_block = C.run_armor_check(affecting, ENERGY)
+	C.apply_damage(70, STAMINA, BODY_ZONE_CHEST, armor_block)
 	C.stuttering = 5
 	if(ishuman(C))
 		var/mob/living/carbon/human/H = C
