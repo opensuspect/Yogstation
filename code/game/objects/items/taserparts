@@ -3,8 +3,6 @@
 	desc = "A circuit capable of allowing disablers to use more firing modes, useless without an appropriate diode"
 	icon = 'icons/obj/module.dmi'
 	icon_state = "cyborg_upgrade3"
- /obj/item/taserboard
+ /obj/item/disableroverride/taserboard
 	name = "taser diode circuit board"
 	desc = "A long discontinued circuit board containing a diode that once enabled hybrid tasers to function. You may be able to create a taser with an appropriate disabler firmware override board."
-	icon = 'icons/obj/module.dmi'
-	icon_state = "cyborg_upgrade3"
