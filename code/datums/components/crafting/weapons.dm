@@ -42,6 +42,18 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+/datum/crafting_recipe/advtaser
+	name = "Hybrid Taser"
+	result = /obj/item/gun/energy/e_gun/advtaser
+	reqs = list(/obj/item/disableroverride,
+				/obj/item/taserboard,
+				/obj/item/gun/energy/disabler,
+				/obj/item/stack/cable_coil = 10)
+	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	time = 5 SECONDS
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
 /datum/crafting_recipe/stunprod
 	name = "Stunprod"
 	result = /obj/item/melee/baton/cattleprod
