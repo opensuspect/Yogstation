@@ -109,7 +109,7 @@
 	desc = "A circuit capable of allowing disablers to use more firing modes, useless without an appropriate diode"
 	id = "disabler_override"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 2000, /datum/material/glass = 5000 /datum/material/silver = 400, /datum/material/diamond = 1200, /datum/material/uranium = 800)
+	materials = list(/datum/material/iron = 2000, /datum/material/glass = 5000, /datum/material/silver = 400, /datum/material/diamond = 1200, /datum/material/uranium = 800)
 	build_path = /obj/item/batonupgrade
 	category = list("Firing Pins")
 	departmental_flags = DEPARTMENTAL_FLAG_ARMORY
