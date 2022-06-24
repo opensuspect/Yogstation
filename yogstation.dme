@@ -1016,6 +1016,7 @@
 #include "code\game\objects\items\stunbaton.dm"
 #include "code\game\objects\items\supermatter_delaminator.dm"
 #include "code\game\objects\items\syndicateReverseCard.dm"
+#include "code\game\objects\items\taserparts"
 #include "code\game\objects\items\taster.dm"
 #include "code\game\objects\items\teleportation.dm"
 #include "code\game\objects\items\teleprod.dm"
