@@ -104,6 +104,16 @@
 	category = list("Firing Pins")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/disablerupgrade
+	name = "Disabler Override"
+	desc = "A circuit capable of allowing disablers to use more firing modes, useless without an appropriate diode"
+	id = "disabler_override"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 2000, /datum/material/glass = 5000 /datum/material/silver = 400, /datum/material/diamond = 1200, /datum/material/uranium = 800)
+	build_path = /obj/item/batonupgrade
+	category = list("Firing Pins")
+	departmental_flags = DEPARTMENTAL_FLAG_ARMORY
+
 /datum/design/batonupgrade
 	name = "Baton Power Upgrade"
 	desc = "A new power management circuit which enables stun batons to instantly stun, at the cost of more power usage."
