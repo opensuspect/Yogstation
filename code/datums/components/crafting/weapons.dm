@@ -46,7 +46,7 @@
 	name = "Hybrid Taser"
 	result = /obj/item/gun/energy/e_gun/advtaser
 	reqs = list(/obj/item/disableroverride,
-				/obj/item/taserboard,
+				/obj/item/disableroverride/taserboard,
 				/obj/item/gun/energy/disabler,
 				/obj/item/stack/cable_coil = 10)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
