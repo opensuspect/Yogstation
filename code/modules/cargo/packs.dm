@@ -488,9 +488,9 @@
 	name = "Taser Diodes Crate"
 	desc = "Contains three surplus taser diode circuitboards, for when you want a trip down memory lane. Requires Armory access to open."
 	cost = 10000
-	contains = list(/obj/item/taserboard,
-					/obj/item/taserboard,
-					/obj/item/taserboard)
+	contains = list(/obj/item/disableroverride/taserboard,
+					/obj/item/disableroverride/taserboard,
+					/obj/item/disableroverride/taserboard)
 	crate_name = "taser diode crate"
 
 /datum/supply_pack/security/armory/riotshotgun
